@@ -1,0 +1,331 @@
+:root{
+    --color-white:hsl(0,0%,100%);
+    --color-light-grayish:hsl(270,3%,87%);
+    --color-dark-grayish:hsl(279,6%,55%);
+    --color-dark-violet:hsl(278,68%,11%);
+
+    --color-linear-gradient:hsl(249,99%,64%);
+    --color-linear-gradient2:hsl(278,94%,30%);
+    
+    --color-red-input-errors:hsl(0,100%,66%);
+
+}
+
+*{
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    line-height: 1.25rem;
+    overflow: hidden;
+}
+
+body{
+    height: 100svh;
+    width: 375px;
+}
+
+/* CARD IMAGES */
+
+.bg-main-desktop{
+    position: absolute;
+    left: -99999px;
+    top: -99999px;
+}
+
+.card-img{
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card-img_back img,
+.card-img_front img{
+    position: absolute;
+    width: 300px;
+}
+
+.card-img_back img{
+    top: 35px;
+    left: 60px;
+}
+
+.card-img_front img{
+    top: 128px;
+    left: 10px;
+}
+
+.card-text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.8rem;
+    margin-top: 3rem;
+}
+
+.card-img_front_number{
+    position: absolute;
+    top: 220px;
+    left: 40px;
+    width: 250px;
+    color: var(--color-white);
+    word-spacing: 1rem;
+    font-size: 18px;
+}
+
+/* CARD BACK WITH CVC */
+
+.card-img_back_cvc{
+    position: absolute;
+    color: var(--color-white);
+    top: 106px;
+    left: 300px;
+    font-size: 12px;
+}
+
+/* CARD FRONT WITH THE TEXT */
+
+.card-logo-img{
+    z-index: 1;
+    position: absolute;
+    width: 60px;
+    height: 35px;
+    top: 150px;
+    left: 40px;
+}
+
+.card-img_front_name{
+    position: absolute;
+    color: var(--color-white);
+    top: 260px;
+    left: 40px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.card-img_front_date{
+    position: absolute;
+    color: var(--color-white);
+    top: 260px;
+    left: 250px;
+    font-size: 12px;
+}
+
+
+/* CARDHOLDER NAME NUMBER DATE CVC */
+
+.form{
+    display: grid;
+    gap: 1rem;
+}
+
+.cardholder-name_text,
+.cardholder-number_text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cardholder-exp-date-cvc_text{
+    display: flex;
+    padding-bottom: 1rem;
+}
+
+.cardholder-exp-text input,
+.cardholder-date-text input{
+    width: 70px;
+}
+
+.cardholder-cvc-text input{
+    width: 140px;
+   
+}
+
+.cardholder-cvc-text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-right: 80px;
+}
+
+input{
+    border-radius: 8px;
+    height: 40px;
+    border-width: 0.2px;
+    border-color: var(--color-light-grayish);
+    border: 0.5px solid var(--color-light-grayish);
+    box-shadow: none;
+}
+
+label{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: var(--color-dark-violet);
+}
+
+input::placeholder{
+    color: var(--color-light-grayish);
+    font-size: 16px;
+}
+
+.cardholder-name_text input[type="text"],
+.cardholder-number_text input[type="number"] {
+    padding-left: 12px;
+}
+
+.cardholder-exp-text input[type="number"]{
+    padding-left: 18px;
+}
+
+.cardholder-date-text input[type="number"]{
+    padding-left: 22px;
+}
+
+.cardholder-cvc-text input[type="number"]{
+    padding-left: 14px;
+    width: 185px;
+}
+
+/* SUBMIT BUTTON */
+
+.submit{
+    background-color: var(--color-dark-violet);
+    color: var(--color-white);
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    box-shadow: none;
+    font-size: 18px;
+}
+
+button.submit:focus{
+    background-color: var(--color-linear-gradient2);
+}
+
+button.submit:hover{
+    background-color:var(--color-linear-gradient2);
+}
+
+/* THANK YOU CONTAINER */
+
+.hidden{
+    display: grid;
+    place-content: center;
+    gap: 40px;
+    display: none;
+}
+
+.thank-you-part{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 4rem;
+    gap: 1px;
+}
+
+.thank-you_title{
+    color: var(--color-dark-violet);
+    font-size: 38px;
+    line-height: 4rem;
+    text-transform: uppercase;
+}
+
+.thank-you_p{
+    color: var(--color-dark-grayish);
+}
+
+
+button.continue{
+    background-color: var(--color-dark-violet);
+    color: var(--color-white);
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    box-shadow: none;
+    font-size: 18px;
+    width: 330px;
+}
+
+button.continue:focus{
+    background-color: var(--color-linear-gradient2);
+}
+
+button.continue:hover{
+    background-color:var(--color-linear-gradient2);
+}
+
+/* MEDIA QUERIES of 1440px*/
+
+@media screen and (min-width: 1440px) {
+    body{
+        width: auto;
+    }
+    .form{
+        gap: 2.5rem;
+    }
+
+    .card-text{
+        height: 100svh;
+        width: 500px;
+        gap: 2rem;
+        transform: translateX(850px) translateY(-60px);
+    }
+
+    .cardholder-cvc-text input[type="number"]{
+        width: 270px;
+    }
+
+    .bg-main-mobile{
+        display: none;
+    }
+
+    .bg-main-desktop{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100svh;
+        width: 500px;
+    }
+
+    .card-img_back img{
+        height: 250px;
+        width: 400px;
+        transform: translate(240px, 450px);
+    }
+
+    .card-img_front img{
+        height: 250px;
+        width: 400px;
+        transform: translate(190px, 50px);
+    }
+
+    .card-logo-img{
+        transform: translate(200px, 60px);
+        height: 50px;
+        width: 90px;
+    }
+
+    .card-img_front_number{
+        transform: translate(200px, 100px);
+    }
+
+    .card-img_front_name{
+        transform: translate(200px, 130px);
+        font-size: 16px;
+    }
+
+    .card-img_front_date{
+        transform: translate(280px, 130px);
+    }
+
+    .card-img_back_cvc{
+        transform: translate(320px, 492px);
+    }
+}
+  
